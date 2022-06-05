@@ -1,1 +1,1 @@
-sequelize-auto -h localhost -d library -u root -x 19871990 -p 3306 --dialect mysql -c ./src/assets/sequelize-auto-settings.json -o ./src/models
+sequelize-auto -h localhost -d library -u root -x password -p 3306 --dialect mysql -c ./src/assets/sequelize-auto-settings.json -o ./src/models

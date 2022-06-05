@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 var cors = require('cors')
 require('dotenv').config()
 // merge test 
@@ -7,8 +6,7 @@ require('dotenv').config()
 
 const app = express();
 app.use(cors())
-app.use(bodyParser.json({limit: '25mb'}));
-app.use(bodyParser.urlencoded({extended:true}))
+
 
 // routes 
 app.use(require('./src/routes/index'))
