@@ -6,7 +6,7 @@ var jwt = require('jsonwebtoken');
 
 router.post('/login', async (req, res) => {
     const privateKey = process.env.PRIVATE_KEY_JWT
-    let data =[]
+    let data = {}
     
     try {
         data = {
@@ -14,13 +14,13 @@ router.post('/login', async (req, res) => {
             email:"mmarcoantoniolopez@gmail.com",
             expiresIn : '2'
         }
-        jwt.sign( data[0], privateKey, function(err, token) {
+        jwt.sign( data, privateKey, function(err, token) {
             console.log(token)
             res.json({
                 token,
                 message: "Transacción completada satisfactoriamente.",
-                isadmin: data[0].isadmin,
-                name : data[0].name
+                email: data.email,
+                name : data.name
             })
         });
        
@@ -37,7 +37,7 @@ router.post('/login', async (req, res) => {
 
 router.get('/', async (req, res) => {
     res.status(200).send({
-        message: 'Bienvenido API Twitter Challenge V2'
+        message: 'Bienvenido API Twitter Challenge V2 ' + process.env.NAME
     });
 });
 
