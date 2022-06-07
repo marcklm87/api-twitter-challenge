@@ -25,7 +25,7 @@ router.post('/login', async (req, res) => {
         });
        
     } catch (error) {
-        console.log('error=>', error)
+        console.log('error login=>', error)
         res.status(400).send({
             error,
             message:"Intente más tarde! Tenemos problemas para resolver la petición"
