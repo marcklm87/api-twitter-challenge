@@ -1,10 +1,6 @@
 # api-library-challenge
 
-API Rest con Sequelize. 
-
-Se dejaran en el repositorio las variables de entorno.
-
-Se agrega en la carpeta de scripts el DDL de la BD MySQL
+API Rest Socket con Twitter Node Js
 
 ## Getting started
 
