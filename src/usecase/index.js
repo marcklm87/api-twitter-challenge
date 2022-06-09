@@ -163,7 +163,7 @@ async function streamConnect(retryAttempt, socket ) {
     }).on('err', error => {
         if (error.code !== 'ECONNRESET') {
             console.log('error ECONNRESET', error.code);
-            process.exit(1);
+            // process.exit(1);
         } else {
             // This reconnection logic will attempt to reconnect when a disconnection is detected.
             // To avoid rate limits, this logic implements exponential backoff, so the wait time
